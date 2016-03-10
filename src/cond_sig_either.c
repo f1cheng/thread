@@ -29,10 +29,10 @@ void *thread_wait(void *pid)
     pthread_mutex_lock(&mutex);
     if (!flag)
     {
-			printf("thread%d wait begin\n", id);
-			pthread_cond_wait(&cond, &mutex);
-			printf("thread%d wait end\n", id);
-	  }
+      printf("thread%d wait begin\n", id);
+      pthread_cond_wait(&cond, &mutex);
+      printf("thread%d wait end\n", id);
+    }
     printf("thread %d is running\n", id);
     pthread_mutex_unlock(&mutex);
   }
