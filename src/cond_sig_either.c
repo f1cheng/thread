@@ -48,8 +48,11 @@ void *thread_notify()
   return NULL;
 }
  
-
+#ifdef __MAIN__
 int main(int argc, char *argv[])
+#else
+int a_main(int argc, char *argv[])
+#endif
 {
   (void)argc;
   (void)argv;
