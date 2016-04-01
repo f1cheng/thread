@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <pthread.h>
 
+int pthread_mutexattr_destroy(pthread_mutexattr_t *mattr) 
+int pthread_mutex_lock(pthread_mutex_t *mutex)    
+int pthread_mutex_unlock(pthread_mutex_t *mutex)    
+int pthread_mutex_trylock(pthread_mutex_t *mutex)  
+int pthread_mutexattr_destroy(pthread_mutexattr_t *mattr)
+
 int  flag;
 pthread_cond_t cond;
 pthread_mutex_t mutex;
