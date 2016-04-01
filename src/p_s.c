@@ -24,7 +24,7 @@ void *consume_wait(void *pid)
       pthread_cond_wait(&cond, &mutex);
     }
     --flag;
-    printf("<<<<<<<<<<<<<<<<<<<<<<pick one:flag=%d\n", flag);
+    printf("<<<pick one:flag=%d\n", flag);
     pthread_mutex_unlock(&mutex);
   }
   return NULL;
@@ -37,7 +37,7 @@ void *produce_notify()
   if (flag == 0)
       pthread_cond_signal(&cond);
   ++flag;
-	printf(">>>produce one:flag=%d\n", flag);
+  printf(">>>produce one:flag=%d\n", flag);
   pthread_mutex_unlock(&mutex);
   return NULL;
 }
