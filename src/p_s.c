@@ -48,10 +48,10 @@ int main(int argc, char *argv[])
 {
   (void)argc;
   (void)argv;
-  pthread_t wait[C_THREADS], notify[P_THREADS];
   int id;
-
+  pthread_t wait[C_THREADS], notify[P_THREADS];
   init();
+  
   for(id=0; id<P_THREADS; id++)
       pthread_create(&notify[id], NULL, produce_notify, NULL);
   
