@@ -30,7 +30,6 @@ void *consume_wait(void *pid)
   return NULL;
 }
 
-
 void *produce_notify()
 {
   pthread_mutex_lock(&mutex);
