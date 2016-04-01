@@ -53,10 +53,12 @@ int main(int argc, char *argv[])
   init();
   
   for(id=0; id<P_THREADS; id++)
-      pthread_create(&notify[id], NULL, produce_notify, NULL);
+      pthread_create(&notify[id], NULL, 
+                     produce_notify, NULL);
   
   for(id=0; id<C_THREADS; id++) 
-      pthread_create(&wait[id], NULL, consume_wait, &id);
+      pthread_create(&wait[id], NULL, 
+                     consume_wait, &id);
 
   printf("wait all thread to stop\n");
   for(id=0; id<P_THREADS; id++)
