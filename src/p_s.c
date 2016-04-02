@@ -61,6 +61,7 @@ int main(int argc, char *argv[])
                      consume_wait, &id);
 
   printf("Wait for all threads to stop\n");
+  
   for(id=0; id<P_THREADS; id++)
       pthread_join(notify[id], NULL);
   
