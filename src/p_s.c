@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
       pthread_create(&wait[id], NULL, 
                      consume_wait, &id);
 
-  printf("wait all thread to stop\n");
+  printf("Wait for all threads to stop\n");
   for(id=0; id<P_THREADS; id++)
       pthread_join(notify[id], NULL);
   
